@@ -45,5 +45,16 @@ class Matrix{
 		return result
 	}
 
-
+	static mult(a,b){
+		if (a.cols != b.rows) return null
+		let result = new Matrix(a.rows,b.cols)
+		for (let i = 0; i < result.rows; i++) {
+			for (let j = 0; j < result.cols; j++) {
+				for (let k = 0; k < result.rows; k++) {
+					result.data[i][j] += a.data[i][k]*b.data[k][j]
+				} 
+			}		
+		}
+		return result
+	}
 }
