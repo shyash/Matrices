@@ -51,5 +51,14 @@ class Matrix:
 		result.data = [[random()*num//1 for j in range(self.cols)] for i in range(self.rows)] 
 		return result
 
-
+def main():
+	m1 = Matrix(2,3).randomize(5)
+	m2 = Matrix(2,3).randomize(5).transpose()
+	m3 = m1.mult(m2)
+	print(m1)
+	print(m2)
+	print(m3)
+	
+if __name__ == '__main__':
+    main()
 	 
