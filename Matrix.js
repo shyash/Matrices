@@ -57,4 +57,24 @@ class Matrix{
 		}
 		return result
 	}
+
+	transpose(){
+		let result = new Matrix(this.cols,this.rows) 
+		for (let i = 0; i < this.rows; i++) {
+			for (let j = 0; j < this.cols; j++) {
+				result.data[j][i] = this.data[i][j]
+			}		
+		}
+		return result
+	}
+
+	randomize(num){
+		let result = new Matrix(this.rows,this.cols) 
+		for (let i = 0; i < result.rows; i++) {
+			for (let j = 0; j < result.cols; j++) {
+				result.data[i][j] = Math.floor(Math.random()*num)
+			}		
+		}
+		return result
+	}
 }
