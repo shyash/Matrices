@@ -21,6 +21,20 @@ class Matrix{
 		return result
 	}
 
+	static add(a,b){
+		if (a.rows != b.rows || a.cols != b.cols){
+			return null
+		}
+		let result = new Matrix(a.rows,a.cols)
+		for (let i = 0; i < result.rows; i++) {
+			for (let j = 0; j < result.cols; j++) {
+				result.data[i][j] = a.data[i][j] + b.data[i][j]
+			}		
+		}
+		return result
+
+	}
+
 	mult(num){
 		let result = new Matrix(this.rows,this.cols) 
 		for (let i = 0; i < result.rows; i++) {
@@ -30,5 +44,6 @@ class Matrix{
 		}
 		return result
 	}
-	
+
+
 }
