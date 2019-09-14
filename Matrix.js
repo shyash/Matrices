@@ -20,4 +20,15 @@ class Matrix{
 		}
 		return result
 	}
+
+	mult(num){
+		let result = new Matrix(this.rows,this.cols) 
+		for (let i = 0; i < result.rows; i++) {
+			for (let j = 0; j < result.cols; j++) {
+				result.data[i][j] = this.data[i][j] * num
+			}		
+		}
+		return result
+	}
+	
 }
