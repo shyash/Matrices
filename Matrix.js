@@ -77,4 +77,8 @@ class Matrix{
 		}
 		return result
 	}
+
+	print(){
+		console.table(this.data)
+	}
 }
